@@ -294,9 +294,9 @@ console.log(getraenkeUpperCase)
 // ---------------------------map mit math.round
 let fahrenheit2 = [0, 32, 45, 50, 75, 80, 99, 120];
 let celsius2 = elem => Math.round(((elem - 32) / 1.8).toFixed(2))
-let celsiusTemp = fahrenheit2.map(celsius2)
+let celsius3 = fahrenheit2.map(celsius2)
 
-console.log(celsiusTemp)
+console.log(celsius3)
 
 
 
