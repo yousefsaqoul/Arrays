@@ -8,7 +8,7 @@ function clickMe() {
     console.log(mainShift)
 
 }
-
+// -------------------------------------------------------------------
 
 let meinAdresse = ["RathelbeckStraße", "40627", "Düsseldorf", "Nord-Rhein Westfallen"];
 let bestFreunde = ["Marwan", "Khalil", "Omar"]
@@ -27,6 +27,8 @@ meineTrainer3[1] = "Georg"
 meineTrainer3[2] = "Elain"
 meineTrainer3[3] = "hakan"
 console.log(meineTrainer3)
+// -------------------------------------------------------------------
+
 // -----------------1-3 index
 
 let myNumber = [5, 6, 7, 8, 9, 10];
@@ -60,6 +62,7 @@ const split9 = meinText3.split(" ");
 console.log(split7)
 console.log(split8)
 console.log(split9)
+// -------------------------------------------------------------------
 
 
 // -------------Push
@@ -82,6 +85,8 @@ console.log(heroUndEnemy2)
 heroUndEnemy1.pop(1)
 
 console.log(heroUndEnemy1.pop())
+// -------------------------------------------------------------------
+
 
 // --------------------unshift
 
@@ -121,12 +126,14 @@ let arraySplice = [
 ];
 arraySplice.splice(4, 4, "Yousuf", "saqoul")
 console.log(arraySplice)
+// -------------------------------------------------------------------
 
 
 // ----------slices ----------
 let arrySlice = ["Mango", "Appel", "Banana", "Orangen"]
 arrySlice.slice(1, 2)
 console.log(arrySlice.slice(1, 2))
+// -------------------------------------------------------------------
 
 
 
@@ -151,15 +158,12 @@ let languages = [
 console.log(languages)
 languages.reverse()
 console.log(languages)
-
-
-
-
-
 let numArray2 = [36, 324, 122, 62, 98, 88, 99, 1000];
 console.log(numArray2)
 numArray2.reverse();
 console.log(numArray2)
+// -------------------------------------------------------------------
+
 
 // --------- join
 let meinText11 = ["hello", "world"]
@@ -176,8 +180,7 @@ console.log(join11)
 console.log(join22)
 console.log(join33)
 console.log(join44)
-
-
+// -------------------------------------------------------------------
 
 
 
@@ -192,39 +195,23 @@ console.log(string_reverse("saqoul"))
 wordReverse = (str) => str.split("").reverse().join("")
 console.log(wordReverse("Syrien"))
 
-
-// -------------------ForEach---------------------
-
-
-let getraenke = [
-    "Coca-Cola",
-    "Apfelsaft",
-    "Pepsi",
-    "Traubensaft",
-    "Sprite",
-    "Orangensaft",
-    "Red Bull Energy Drink",
-    "Fanta"
-]
-getraenke.forEach(elt => console.log(elt))
-
-
-getraenke.forEach(myDrink);
-function myDrink(elt) {
-    document.getElementById("demo").innerHTML += elt + "<br>";
+// ------------ function 2 reverse 
+function reverse(str) {
+    console.log(str.split('').reverse().join(''))
 }
+reverse('Ich Probiere')
 
-// --------map
-let getraenkeUpperCase = getraenke.map(elt => elt.toUpperCase() + elt.slice(0))
-console.log(getraenkeUpperCase)
-//  oder
-getraenke.map = (elt) => elt.toUpperCase().map(0)
-console.log(getraenkeUpperCase)
+reverse = (str) => console.log(str.split('').reverse().join(''))
+reverse('Ich Probiere2')
+// ---------------------------
 
 
 
 
 
+
+
+// ---------------map
 let arrayMyMap = [
     18,
     16,
@@ -269,5 +256,79 @@ console.log(newArray)
 console.log(newArray.sort(forSort = (a, b) => a - b))
 // ----------------------------------------------------------------
 
-let fahrenheit = [0, 32, 45, 50, 75, 80, 99, 120];
 
+// -------------------forEach---------------------
+
+
+let getraenke = [
+    "Coca-Cola",
+    "Apfelsaft",
+    "Pepsi",
+    "Traubensaft",
+    "Sprite",
+    "Orangensaft",
+    "Red Bull Energy Drink",
+    "Fanta"
+]
+getraenke.sort()
+let drink = str => {
+    console.log(str)
+    document.write(str + "<br>")
+}
+getraenke.forEach(drink)
+// ----------------------------------------------------------------
+
+
+
+// --------map
+let getraenkeUpperCase = getraenke.map(elt => elt.toUpperCase() + elt.slice(0))
+console.log(getraenkeUpperCase)
+//  oder
+getraenke.map = (elt) => elt.toUpperCase().map(0)
+console.log(getraenkeUpperCase)
+
+// ----------------------------------------------------------------
+
+
+
+// ---------------------------map mit math.round
+let fahrenheit2 = [0, 32, 45, 50, 75, 80, 99, 120];
+let celsius2 = elem => Math.round(((elem - 32) / 1.8).toFixed(2))
+let celsiusTemp = fahrenheit2.map(celsius2)
+
+console.log(celsiusTemp)
+
+
+
+
+
+
+
+
+
+// // ------------------------ reverse word
+// function string_reverse(str) {
+//     return str.split("").reverse().join("")
+// }
+// console.log(string_reverse("saqoul"))
+
+// // oder 
+
+// wordReverse = (str) => str.split("").reverse().join("")
+// console.log(wordReverse("Syrien"))
+
+// // ------------ function 2 reverse 
+// function reverse(str) {
+//     console.log(str.split('').reverse().join(''))
+// }
+// reverse('Ich Probiere')
+
+// reverse = (str) => console.log(str.split('').reverse().join(''))
+// reverse('Ich Probiere2')
+// // ---------------------------
+
+// for (i = 0; i <= 6; i++) {
+//     console.log('hi ' + i)
+//     document.write('<h1> hallo world i am For' + i + '</h1>')
+//     document.write('<input type="text"> </input>' + i)
+// }
